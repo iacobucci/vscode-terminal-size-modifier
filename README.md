@@ -4,15 +4,33 @@ This chnages the setting `terminal.integrated.fontSize` and vscode instantly upd
 It is handy to use with a `keybindings.json` configuration such as this:
 ```json
     {
+        "command": "runCommands",
         "key": "ctrl+=",
-        "command": "terminal-size-modifier.increaseTerminalFontSize"
+        "args": {
+            "commands": [
+                "terminal-size-modifier.increaseTerminalFontSize",
+                "editor.action.fontZoomIn"
+            ],
+        }
     },
     {
+        "command": "runCommands",
         "key": "ctrl+-",
-        "command": "terminal-size-modifier.decreaseTerminalFontSize"
+        "args": {
+            "commands": [
+                // "terminal-size-modifier.decreaseTerminalFontSize",
+                "editor.action.fontZoomOut"
+            ],
+        }
     },
     {
+        "command": "runCommands",
         "key": "ctrl+0",
-        "command": "terminal-size-modifier.resetTerminalFontSize"
-    }
+        "args": {
+            "commands": [
+                "terminal-size-modifier.resetTerminalFontSize",
+                "editor.action.fontZoomReset"
+            ],
+        }
+    },
 ```
