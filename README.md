@@ -18,7 +18,7 @@ It is handy to use with a `keybindings.json` configuration such as this:
         "key": "ctrl+-",
         "args": {
             "commands": [
-                // "terminal-size-modifier.decreaseTerminalFontSize",
+                "terminal-size-modifier.decreaseTerminalFontSize",
                 "editor.action.fontZoomOut"
             ],
         }
